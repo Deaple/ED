@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Empregado {
 
+    private String nome;
+    private Computador pc;
+
     public String getNome() {
         return nome;
     }
@@ -19,16 +22,17 @@ public class Empregado {
     public Computador getPc() {
         return pc;
     }
-    private String nome;
-    private Computador pc;
+    
     public Empregado(String n, Computador c){
         nome = n;
         pc = c;
     }
+    
     public Empregado(String n, int m, int h, int v, String p){
         nome = n;
         pc = new Computador(m,h,v,p);
     }
+
     private  Computador comprar(){
         int h,m,v; String p;
         Scanner in = new Scanner(System.in);
@@ -44,7 +48,8 @@ public class Empregado {
         Computador c = new Computador(m,h,v,p);
         return c;
     }
-    public  static void transferir(Empregado e1, Empregado e2){
+
+    public static void transferir(Empregado e1, Empregado e2){
         System.out.printf("\nPC de %s :\n",e1.nome);
         e1.pc.imprimeCmp();
         System.out.printf("Será transferido para %s \n",e2.nome);

@@ -23,9 +23,8 @@ public class Aula3 {
         System.out.println("Nome: "+e3.getNome()+"\nComputador: ");
         e3.getPc().imprimeCmp();
         Empregado.transferir(e1,e2); //Transfere o PC de Joao p/ Pedro e compra um p/ Joao
-      //  e1.getPc().imprimeCmp();    
-      //  e2.getPc().imprimeCmp();
         Empregado.transferir(e3,e1); //Transfere o PC de Maria p/ Joao e compra um p/ Maria
+        
         System.out.println("\n\nComputadores: ");
         System.out.println("Nome: "+e1.getNome()+"\nComputador: ");
         e1.getPc().imprimeCmp();
